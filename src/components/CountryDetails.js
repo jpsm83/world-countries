@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import countries from './../countries.json';
 import CountryList from './CountryList';
 
-//give the country full name based on the avreviation (cca3). will be use to find th borders countries names
+//give the country full name based on the avreviation (cca3). will be use to find the borders countries names
 function getCountryName(country) {
 	return country.map((cca3) => {
 		return countries.find(countryName => countryName.cca3 === cca3);

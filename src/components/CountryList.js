@@ -1,11 +1,16 @@
+// react hooks can be used only with functional react components
 import React, { useState, useEffect } from 'react';
 import CountryItem from './CountryItem';
 import countries from './../countries.json';
 
 export default function CountryList() {
 
+	// REACT HOOKS - useState / useEffect / etc...
+	//     current state     updated state        default state
 	const [countriesArray, setCountriesArray] = useState(countries);
 	
+
+	// useEffect is equal to componentDidMount in react class components
 	const [search, setSearch] = useState('');
 	useEffect(() => {
 		setCountriesArray(
